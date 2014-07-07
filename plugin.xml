@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>
+        <lang name="default">Titles</lang>
+        <lang name="russian">Titles</lang>
+    </name>
+    <author>
+        <lang name="default">Chiliec</lang>
+        <lang name="russian">Chiliec</lang>
+    </author>
+    <homepage>http://livestreet.net</homepage>
+    <version>1.0.0</version>
+    <requires>
+        <livestreet>1.0.3</livestreet>
+        <plugins>
+        </plugins>
+    </requires>
+    <description>
+        <lang name="default">Parse titles for topic-link from source</lang>
+        <lang name="russian">Парсит тайтлы в топиках-ссылках с источника</lang>
+    </description>
+</plugin>
