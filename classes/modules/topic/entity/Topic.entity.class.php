@@ -17,13 +17,14 @@ class PluginTitles_ModuleTopic_EntityTopic extends PluginTitles_Inherit_ModuleTo
 			$sUrl='http://'.$sUrl;
 		}
 		if (false === ($title = $this->Cache_Get("link_title_{$sUrl}"))) {
-		  	if($content = @file_get_contents($sUrl) == true) {
+			$content = @file_get_contents($sUrl);
+		  	if($content == true) {
 				preg_match('/<title>(.*)<\/title>/s', $content, $m);
 				$title = $m[1];
 			} else {
 				$title = $this->Lang_Get('plugin.titles.titles_read_more');
 			}
-			$this->Cache_Set($title, "link_title_{$sUrl}", array(), 1);
+			$this->Cache_Set($title, "link_title_{$sUrl}", array(), 60*60*24);
 		}
 		return $title;
 	}
